@@ -1,0 +1,58 @@
+Input file SampleEnglish-BeforeCheckRefs.db Output file SampleEnglish-AfterCheckRefs.db   05/04/2020
+
+######### Checking homographs  ##########
+
+
+########  Checking sy  #########
+
+
+########  Checking an  #########
+
+Found \an short1 - \lx long
+Found \an long1 - \lx short
+Found \an tall - \lx short
+Found \an short1 - \lx tall
+
+########  Checking cf  #########
+
+
+########  Checking va  #########
+
+Found \va aluminium - \lx aluminum
+No match for  \va analyse  - \lx analyze
+Found \va colour - \lx color
+No match for  \va criticise  - \lx criticize
+No match for  \va lift  - \lx elevator
+No match for  \va bonnet  - \lx hood
+Found \va jewellery - \lx jewelry
+
+########  Checking mn  #########
+
+Found \mn aluminum - \lx aluminium
+Found \mn hood1 - \lx bonnet
+Found \mn colorize - \lx colorization
+Found \mn color - \lx colorize
+Found \mn color - \lx colour
+Found \mn criticism - \lx constructive criticism
+Found \mn criticize - \lx criticism
+Found \mn short1 - \lx in short order
+Found \mn jewelry - \lx jewellery
+Found \mn elevator - \lx lift
+Found \mn long1 - \lx long account
+Found \mn long1 - \lx long and short of it, the
+Found \mn short1 - \lx long and short of it, the
+Found \mn long1 - \lx longer
+Found \mn -er - \lx longer
+Found \mn long1 - \lx longest
+Found \mn -est - \lx longest
+Found \mn criticize - \lx overcriticize
+Found \mn short2 - \lx run short
+Found \mn short1 - \lx shorter
+Found \mn -er - \lx shorter
+Found \mn short1 - \lx shortest
+Found \mn -est - \lx shortest
+Found \mn tall - \lx taller
+Found \mn -er - \lx taller
+Found \mn tall - \lx tallest
+Found \mn -est - \lx tallest
+Found \mn criticize - \lx uncriticizingly

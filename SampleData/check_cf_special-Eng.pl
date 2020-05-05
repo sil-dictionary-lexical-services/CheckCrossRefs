@@ -42,7 +42,7 @@ foreach my $s (@special_char_list){
 my $date = localtime->strftime("%m/%d/%Y");
 
 # EDIT THE FOLLOWING LINE TO PROVIDE THE NAME OF THE .INI FILE
-my $ini_file = "check_cf.ini";
+my $ini_file = "check_cf-Eng.ini";
 
 my $config = Config::Tiny->read($ini_file) 
 	or die "Could not open $ini_file $!";
