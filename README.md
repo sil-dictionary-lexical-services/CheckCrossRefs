@@ -3,7 +3,8 @@ Find cross references without targets (in an SFM file); adjust their markers so 
 
 REQUIRED MODULE:  Config::Tiny
 
-(See ??? to learn how to install a module.)
+(See the paragraph "To install some Perl modules..." on the site  
+https://sites.google.com/sil.org/importing-sfm-to-flex/workflow/set-up-infrastructure/set-up-a-linux-terminal to learn how to install this module.)
 
 INPUT/OUTPUT FILES: specified in .ini FILE
 
