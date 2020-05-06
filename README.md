@@ -32,16 +32,18 @@ By putting these into a custom field, the linguist can easily find them, and the
 SAMPLE FILES:
  There is a folder called SampleData with enough files for you to test this script to see
  how it works.
+
   * SampleEnglish-BeforeCheckRefs.db	Sample input file
   * check_cf-Eng.ini					The .ini file, customized for this database
   * check_cf_special-Eng.pl				The script modified to use this custom .ini file
-  * SampleEnglish-AfterCheckRefs.db		Shows what the output should look like
-  * CheckRefs-Log.db					Show what the log looks like for this data
   
 SAMPLE USAGE:
  To run this customized script on this sample data, type this at the command line, when
  you are in a directory that includes the script, the .ini file, and the input SFM file.
  
    perl check_cf_special-Eng.pl
-   
- 
+
+SAMPLE OUTPUT (in ExpectedOutput folder):
+
+  * SampleEnglish-AfterCheckRefs.db		Shows what the output should look like
+  * CheckRefs-Log.db					Show what the log looks like for this data
