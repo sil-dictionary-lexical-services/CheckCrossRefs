@@ -1,5 +1,5 @@
 # CheckCrossRefs
-Find cross references without targets (in an SFM file); adjust their markers so they can be imported into a custom field and linked manually, instead of creating a spurious entry
+PURPOSE: Find cross references without targets (in an SFM file); adjust their markers so they can be imported into a custom field and linked manually, instead of creating a spurious entry.
 
 REQUIRED MODULE:  Config::Tiny
 
@@ -21,13 +21,15 @@ LOGFILE: writes a logfile indicating:
 
 For the "not found" references, it modifies the marker to include _NF.  Because the "not found"
 refs have a different marker from the found ones, they can be imported into a custom field in FLEx.
+(Note that you need to create the custom field in the empty database you will be importing into.)
 
 Missing targets can be the result of several things:
  - Maybe the word is not in the database at all
  - Maybe the reference has more than one target all in one field:  \va colorise, colourise
  - Maybe the reference is missing a homograph number that is needed
  - Maybe the target is misspelled
-By putting these into a custom field, the linguist can easily find them, and they can decide how they want to fix the missing link.  After they fix it, they can delete the contents of the custom field, to make it easier to see which ones have not been dealt with yet.
+
+If the import specialist puts these into a custom field, the linguist can easily find them, and they can decide how they want to fix the missing link.  After they fix it, they can delete the contents of the custom field, to make it easier to see which ones have not been dealt with yet.
 
 SAMPLE FILES:
  There is a folder called SampleData with enough files for you to test this script to see
@@ -35,14 +37,16 @@ SAMPLE FILES:
 
   * SampleEnglish-BeforeCheckRefs.db	Sample input file
   * check_cf-Eng.ini					The .ini file, customized for this database
-  * check_cf_special-Eng.pl				The script modified to use this custom .ini file
+  * check_cf_special-Eng.pl				The script modified to use this custom .ini file (search for "EDIT THIS" to see where the .ini file is specified)
   
 SAMPLE USAGE:
- To run this customized script on this sample data, type this at the command line, when
- you are in a directory that includes the script, the .ini file, and the input SFM file.
+ To run this customized script on this sample data, type the following at the command line, when
+ you are in a directory that includes the script, the .ini file, and the input SFM file:
  
    perl check_cf_special-Eng.pl
 
+ Running this command will produce two output files.  The folder ExpectedOutput contains files that show what output is expected.  You can compare your output files with what is in that folder, to see if your output came out as expected.
+ 
 SAMPLE OUTPUT (in ExpectedOutput folder):
 
   * SampleEnglish-AfterCheckRefs.db		Shows what the output should look like
