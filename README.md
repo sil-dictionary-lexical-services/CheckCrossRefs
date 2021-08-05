@@ -37,7 +37,7 @@ SAMPLE FILES:
 
   * SampleEnglish-BeforeCheckRefs.db	Sample input file
   * check_cf-Eng.ini					The .ini file, customized for this database
-  * check_cf_special-Eng.pl				The script modified to use this custom .ini file (search for "EDIT THIS" to see where the .ini file is specified)
+  * check_cf_special-Eng.pl				The script modified to use this custom .ini file (search for "EDIT THE FOLLOWING LINE" to see where the .ini file is specified)
   
 SAMPLE USAGE:
  To run this customized script on this sample data, type the following at the command line, when
