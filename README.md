@@ -4,7 +4,7 @@ PURPOSE: Find cross references without targets (in an SFM file); adjust their ma
 REQUIRED MODULE:  Config::Tiny
 
 (See the paragraph "To install some Perl modules..." on the site  
-https://sites.google.com/sil.org/importing-sfm-to-flex/workflow/set-up-infrastructure/set-up-a-linux-terminal to learn how to install this module.)
+https://sites.google.com/sil.org/importing-sfm-to-flex/workflow/1-set-up-infrastructure/b-set-up-a-linux-terminal to learn how to install this module.)
 
 INPUT/OUTPUT FILES: specified in .ini FILE
 
@@ -38,15 +38,15 @@ SAMPLE FILES:
   * SampleEnglish-BeforeCheckRefs.db	Sample input file
   * check_cf-Eng.ini					The .ini file, customized for this database
   * check_cf_special-Eng.pl				The script modified to use this custom .ini file (search for "EDIT THE FOLLOWING LINE" to see where the .ini file is specified)
-  
+
 SAMPLE USAGE:
  To run this customized script on this sample data, type the following at the command line, when
  you are in a directory that includes the script, the .ini file, and the input SFM file:
- 
+
    perl check_cf_special-Eng.pl
 
  Running this command will produce two output files.  The folder ExpectedOutput contains files that show what output is expected.  You can compare your output files with what is in that folder, to see if your output came out as expected.
- 
+
 SAMPLE OUTPUT (in ExpectedOutput folder):
 
   * SampleEnglish-AfterCheckRefs.db		Shows what the output should look like
