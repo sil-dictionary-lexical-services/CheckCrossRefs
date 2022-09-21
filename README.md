@@ -3,8 +3,7 @@ PURPOSE: Find cross references without targets (in an SFM file); adjust their ma
 
 REQUIRED MODULE:  Config::Tiny
 
-(See the paragraph "To install some Perl modules..." on the site  
-https://sites.google.com/sil.org/importing-sfm-to-flex/workflow/1-set-up-infrastructure/b-set-up-a-linux-terminal to learn how to install this module.)
+(To learn how to install this module, see the sub-page "Install Perl Modules" on the site https://sites.google.com/sil.org/importing-sfm-to-flex/home Go to the main page and use the search function to look for "Perl Modules")
 
 INPUT/OUTPUT FILES: specified in .ini FILE
 
