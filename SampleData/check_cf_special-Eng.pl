@@ -1,4 +1,5 @@
-﻿
+#!/usr/bin/env perl
+
 use feature ':5.10';
 use warnings;
 use Data::Dumper qw(Dumper);

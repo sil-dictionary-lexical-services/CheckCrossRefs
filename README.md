@@ -11,7 +11,7 @@ This script uses a .ini file to determine the input file, output file, and which
 To use this script, first edit the .ini file with the appropriate values for your project.
 Then you can run the script by simply typing the following at the command line:
 
-USAGE:  perl check_cf_special.pl
+USAGE:  check_cf_special.pl
 
 LOGFILE: writes a logfile indicating:
  * what markers it checked
