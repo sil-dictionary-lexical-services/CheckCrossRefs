@@ -9,6 +9,13 @@ use utf8;
 # Created:	2018	Cindy Mooney
 # Modified:	
 # Modified:	13 Feb 2020	Beth Bryson	add more comments
+# ToDo: should use the following features, cf /SubentryPromotion/se2lx/se2lx.pl
+# $USAGE variable for "or die" clauses
+# Getopt::Long to get:
+#		$inifile - use File::Basename to derive the default ini filename from the scriptname
+#		$inisection - can have multiple runs with different configs
+
+
 
 my $counter = 0;
 my $row;
