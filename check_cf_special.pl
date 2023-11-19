@@ -15,7 +15,6 @@ use Time::Piece;
 use Config::Tiny;
 
 # Created:	2018	Cindy Mooney
-# Modified:	
 # Modified:	13 Feb 2020	Beth Bryson	add more comments
 # ToDo: should use the following features, cf /SubentryPromotion/se2lx/se2lx.pl
 # Getopt::Long to get:
