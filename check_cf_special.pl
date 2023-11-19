@@ -1,12 +1,18 @@
 #!/usr/bin/env perl
 
 my $USAGE = "Usage: $0 \nA script that that finds cross-references without a target and adjusts their marker.";
-use feature ':5.10';
+
+use 5.020;
+use utf8;
+use open qw/:std :utf8/;
+
+use strict;
 use warnings;
+use English;
 use Data::Dumper qw(Dumper);
+
 use Time::Piece;
 use Config::Tiny;
-use utf8;
 
 # Created:	2018	Cindy Mooney
 # Modified:	
