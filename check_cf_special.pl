@@ -1,5 +1,6 @@
 #!/usr/bin/env perl
 
+my $USAGE = "Usage: $0 \nA script that that finds cross-references without a target and adjusts their marker.";
 use feature ':5.10';
 use warnings;
 use Data::Dumper qw(Dumper);
@@ -11,7 +12,6 @@ use utf8;
 # Modified:	
 # Modified:	13 Feb 2020	Beth Bryson	add more comments
 # ToDo: should use the following features, cf /SubentryPromotion/se2lx/se2lx.pl
-# $USAGE variable for "or die" clauses
 # Getopt::Long to get:
 #		$inifile - use File::Basename to derive the default ini filename from the scriptname
 #		$inisection - can have multiple runs with different configs
@@ -53,7 +53,7 @@ my $date = localtime->strftime("%m/%d/%Y");
 my $ini_file = "check_cf.ini";
 
 my $config = Config::Tiny->read($ini_file, 'crlf')
-	or die "Could not open $ini_file $!";
+	or die "Could not open $ini_file $!\n$USAGE";
 
 my $infile = $config->{check_cf}->{infile};
 my $outfile = $config->{check_cf}->{outfile};
@@ -66,13 +66,13 @@ if ( $list_to_check =~ ','){
 else {@list_to_check = $list_to_check; }
 
 open(my $fhlogfile, '>:encoding(UTF-8)', $log_file) 
-	or die "Could not open file '$log_file' $!";
+	or die "Could not open file '$log_file' $!\n$USAGE";
 
 open(my $fhoutfile, '>:encoding(UTF-8)', $outfile) 
-	or die "Could not open file '$outfile' $!";
+	or die "Could not open file '$outfile' $!\n$USAGE";
 
 open(my $fhinfile, '<:encoding(UTF-8)', $infile)
-  or die "Could not open file '$infile' $!";
+  or die "Could not open file '$infile' $!\n$USAGE";
 
 
 write_to_log("Input file $infile Output file $outfile   $date");
