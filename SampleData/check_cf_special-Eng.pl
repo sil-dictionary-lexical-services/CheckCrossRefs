@@ -61,11 +61,12 @@ my $ini_file = "check_cf-Eng.ini";
 my $config = Config::Tiny->read($ini_file, 'crlf')
 	or die "Could not open $ini_file $!\n$USAGE";
 
+
 my $infile = $config->{check_cf}->{infile};
 my $outfile = $config->{check_cf}->{outfile};
 my $log_file = $config->{check_cf}->{logfile};
 my $LC_tag = $config->{check_cf}->{cit_form};
-$list_to_check = $config->{check_cf}->{list_to_check};
+my $list_to_check = $config->{check_cf}->{list_to_check};
 if ( $list_to_check =~ ','){
 	@list_to_check = split(',', $list_to_check);
 }
