@@ -11,7 +11,11 @@ This script uses a .ini file to determine the input file, output file, and which
 To use this script, first edit the .ini file with the appropriate values for your project.
 Then you can run the script by simply typing the following at the command line:
 
-USAGE:  check_cf_special.pl
+USAGE:  `check_cf_special.pl [--inifile inifile.ini] [--section check_cf] [--debug] [--help]`
+ * *inifile* option is the name of the inifile, it defaults to the same name as the script with a *.ini* extension.
+ * *section* option is the name of the section of the *.ini* file to use
+ * *debug* option prints intermediate results.
+ * *help* option prints a Usage message.
 
 LOGFILE: writes a logfile indicating:
  * what markers it checked

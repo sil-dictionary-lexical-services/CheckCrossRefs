@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-my $USAGE = "Usage: $0 \nA script that that finds cross-references without a target and adjusts their marker.";
+my $USAGE = "Usage: $0 [--inifile inifile.ini] [--section check_cf] [--debug] [--help]\nA script that that finds cross-references without a target and adjusts their marker.";
 
 use 5.020;
 use utf8;
@@ -16,12 +16,24 @@ use Config::Tiny;
 
 # Created:	2018	Cindy Mooney
 # Modified:	13 Feb 2020	Beth Bryson	add more comments
-# ToDo: should use the following features, cf /SubentryPromotion/se2lx/se2lx.pl
-# Getopt::Long to get:
-#		$inifile - use File::Basename to derive the default ini filename from the scriptname
-#		$inisection - can have multiple runs with different configs
 
+use File::Basename;
+my $scriptname = fileparse($0, qr/\.[^.]*/); # script name without the .pl
+$USAGE =~ s/inifile\./$scriptname\./;
 
+use Getopt::Long;
+GetOptions (
+	'inifile:s'   => \(my $ini_file = "$scriptname.ini"), # ini filename
+	'section:s'   => \(my $inisection = "check_cf"), # section of ini file to use
+	'help'    => \my $help,
+# additional options go here.
+# 'sampleoption:s' => \(my $sampleoption = "optiondefault"),
+	'debug'       => \my $debug,
+	) or die $USAGE;
+if ($help) {
+	say STDERR $USAGE;
+	exit;
+	}
 
 my $counter = 0;
 my $row;
@@ -54,17 +66,14 @@ foreach my $s (@special_char_list){
 
 my $date = localtime->strftime("%m/%d/%Y");
 
-# EDIT THE FOLLOWING LINE TO PROVIDE THE NAME OF THE .INI FILE
-my $ini_file = "check_cf.ini";
-
 my $config = Config::Tiny->read($ini_file, 'crlf')
 	or die "Could not open $ini_file $!\n$USAGE";
 
-my $infile = $config->{check_cf}->{infile};
-my $outfile = $config->{check_cf}->{outfile};
-my $log_file = $config->{check_cf}->{logfile};
-my $LC_tag = $config->{check_cf}->{cit_form};
-my $list_to_check = $config->{check_cf}->{list_to_check};
+my $infile = $config->{$inisection}->{infile};
+my $outfile = $config->{$inisection}->{outfile};
+my $log_file = $config->{$inisection}->{logfile};
+my $LC_tag = $config->{$inisection}->{cit_form};
+my $list_to_check = $config->{$inisection}->{list_to_check};
 if ( $list_to_check =~ ','){
 	@list_to_check = split(',', $list_to_check);
 }
