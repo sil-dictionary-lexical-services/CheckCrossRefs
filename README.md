@@ -11,7 +11,7 @@ This script uses a .ini file to determine the input file, output file, and which
 To use this script, first edit the .ini file with the appropriate values for your project.
 Then you can run the script by simply typing the following at the command line:
 
-USAGE:  `check_cf_special.pl [--inifile inifile.ini] [--section check_cf] [--debug] [--help]`
+USAGE:  `check_cf.pl [--inifile inifile.ini] [--section check_cf] [--debug] [--help]`
  * *inifile* option is the name of the inifile, it defaults to the same name as the script with a *.ini* extension.
  * *section* option is the name of the section of the *.ini* file to use
  * *debug* option prints intermediate results.
@@ -40,13 +40,13 @@ SAMPLE FILES:
 
   * SampleEnglish-BeforeCheckRefs.db	Sample input file
   * check_cf-Eng.ini					The .ini file, customized for this database
-  * check_cf_special-Eng.pl				The script modified to use this custom .ini file (search for "EDIT THE FOLLOWING LINE" to see where the .ini file is specified)
+  * check_cf-Eng.pl				The script modified to use this custom .ini file (search for "EDIT THE FOLLOWING LINE" to see where the .ini file is specified)
 
 SAMPLE USAGE:
  To run this customized script on this sample data, type the following at the command line, when
  you are in a directory that includes the script, the .ini file, and the input SFM file:
 
-   perl check_cf_special-Eng.pl
+   ./check_cf-Eng.pl
 
  Running this command will produce two output files.  The folder ExpectedOutput contains files that show what output is expected.  You can compare your output files with what is in that folder, to see if your output came out as expected.
 
